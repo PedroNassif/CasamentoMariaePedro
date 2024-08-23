@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form method="post" action="" name="formulario-contato">
+            <h4>Confirmação</h4>
+            <input type="text" name="nome" placeholder="Nome">
+            <input type="cel" name="cel" placeholder="Telefone (Whatsapp)">
+            <textarea name="mensagem" rows="7" placeholder="Sua Menssagem"></textarea>
+            <input type="submit" value="Enviar" id="enviar">
+        </form>
+    </div>
+
+<script>        const script_do_google = 'https://script.google.com/macros/s/AKfycbzLMtC6vksEST2AAU4GBw7_e6YAhIUJeWbZ3JOEiXjhBlm4SdfRfVEjnK0lD5XrLST_/exec';
+    const dados_do_formulario = document.forms['formulario-contato'];
+
+    dados_do_formulario.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        fetch(script_do_google, {method: 'POST', body: new FormData(dados_do_formulario) })
+        .then(response => {
+            //Se os dados forem corretos
+            alert('Dados Enviados com sucesso!', response);
+            dados_do_formulario.reset();
+        })
+        .catch(error => {
+            //Se houver erro
+            console.error('Erro no envio!', error)});
+        });
+</script>
+</body>
+</html>
