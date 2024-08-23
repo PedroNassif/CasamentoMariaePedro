@@ -1,35 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Nosso Casamento</title>
 </head>
 <body>
+    <header>
+        <h1> 
+            <img src="img/Plano de Fundo iCasei.png" alt="flor" class="flor"> 
+            Pedro Miguel e Maria Clara
+        </h1>
+        <p>07 de Dezembro de 2024</p>
+    </header>
+    
+    <section id="contagem-regressiva">
+        <h2 id="frase1">Faltam</h2>
+        <div id="contador"></div>
+    </section>
+
+  <section>
     <div class="container">
-        <form method="post" action="" name="formulario-contato">
+        <form method="post" action="https://script.google.com/macros/s/AKfycbykCKGUxFLN8e5FWpkkRe6UMV9qOXv6bLHkL2O27CDjSs2Qgpshly8uofkiCICKiyKo/exec" name="contact-form">
             <h4>Confirmação</h4>
-            <input type="text" name="nome" placeholder="Nome">
-            <input type="cel" name="cel" placeholder="Telefone (Whatsapp)">
-            <textarea name="mensagem" rows="7" placeholder="Sua Menssagem"></textarea>
-            <input type="submit" value="Enviar" id="enviar">
+            <input type="text" name="Nome" placeholder="Nome">
+            <input type="text" name="Telefone" placeholder="Number">
+            <label for="presenca">Você irá comparecer?</label>
+                <select id="presenca" name="Confirmado" required>
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+            <input type="submit" value="Submit" id="submit">
         </form>
     </div>
+  </section>
 
-<script>        const script_do_google = 'https://script.google.com/macros/s/AKfycbzLMtC6vksEST2AAU4GBw7_e6YAhIUJeWbZ3JOEiXjhBlm4SdfRfVEjnK0lD5XrLST_/exec';
-    const dados_do_formulario = document.forms['formulario-contato'];
+    <section id="lista-presentes">
+        <h2>Lista de Presentes</h2>
+        <p>Confira nossa lista de presentes na Amazon: 
+            <a href="https://www.amazon.com.br/hz/wishlist/ls/ID_DA_LISTA" target="_blank">Clique aqui!</a>
+        </p>
+        <p>Agradecemos muito pela sua presença e pelo carinho. Se você quiser contribuir com um presente, fique à vontade para escolher algo da nossa lista!</p>
+        <h3>Contribua via Pix</h3>
+        <p>Chave Pix: SEU_CODIGO_PIX_AQUI</p>
+        <img src="caminho/para/seu/qrcode.png" alt="QR Code Pix" class="qrcode">
+    </section>
 
-    dados_do_formulario.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        fetch(script_do_google, {method: 'POST', body: new FormData(dados_do_formulario) })
-        .then(response => {
-            //Se os dados forem corretos
-            alert('Dados Enviados com sucesso!', response);
-            dados_do_formulario.reset();
-        })
-        .catch(error => {
-            //Se houver erro
-            console.error('Erro no envio!', error)});
-        });
-</script>
+    <script src="script.js"></script>
 </body>
 </html>

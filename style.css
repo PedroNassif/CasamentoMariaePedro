@@ -1,0 +1,119 @@
+body {
+    font-family: 'Gloock', serif;
+    background-color: #efe7e7;
+    color: #5C8063;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 40px;
+    background-color: #5C8063;
+    color: #fff6f6f7;
+}
+
+h1 {
+    display: flex; /* Usa flexbox para o layout */
+    flex-direction: column; /* Alinha os itens na coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    font-size: 3em;
+    margin-top: 100px; /* Adiciona espaço acima do h1 */
+    color: #fff6f6f7;
+}
+
+.flor {
+    position: relative; /* Permite que a imagem seja posicionada em relação ao h1 */
+    top: -70px; /* Ajuste este valor para mover a imagem para cima */
+    left: 50%; /* Centraliza a imagem horizontalmente */
+    transform: translateX(-130%); /* Ajusta o deslocamento da imagem para o centro */
+    width: 450px; /* Ajuste o tamanho conforme necessário */
+}
+
+p {
+    font-size: 1.2em;
+}
+
+section {
+    margin: 50px 20px;
+    padding: 20px;
+    background-color: #394f3e;
+    color: #fff6f6f7;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#contagem-regressiva {
+    text-align: center;
+}
+
+#contador {
+    font-size: 3em; /* Aumenta o tamanho da fonte */
+    display: flex; /* Usa flexbox para alinhar os elementos */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    gap: 10px; /* Espaço entre os números */
+}
+
+.numero {
+    background-color: rgba(255, 255, 255, 0.5); /* Fundo branco com transparência */
+    border-radius: 10px; /* Cantos arredondados */
+    padding: 10px; /* Espaço interno */
+    text-align: center; /* Centraliza o texto */
+}
+
+.container {
+    background-color: #ffffff; /* Fundo branco */
+    border-radius: 10px; /* Cantos arredondados */
+    padding: 20px; /* Espaço interno */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 500px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza a seção */
+}
+
+h4 {
+    text-align: center; /* Centraliza o título */
+    font-size: 2em; /* Aumenta o tamanho do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    color: #5C8063; /* Cor do título */
+}
+
+input[type="text"],
+select {
+    width: 80%; /* Largura de 80% */
+    padding: 10px; /* Espaço interno */
+    margin: 10px auto; /* Espaço vertical e centraliza horizontalmente */
+    border: 1px solid #ccc; /* Borda leve */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 1em; /* Tamanho da fonte */
+    transition: border-color 0.3s; /* Transição suave para a borda */
+    display: block; /* Necessário para o margin: auto funcionar */
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #5C8063; /* Muda a cor da borda ao focar */
+    outline: none; /* Remove a borda de foco padrão */
+}
+
+input[type="submit"] {
+    background-color: #5C8063; /* Cor de fundo */
+    color: #ffffff; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Cantos arredondados */
+    padding: 10px 20px; /* Espaço interno */
+    font-size: 1.2em; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave para a mudança de cor */
+    width: 100%; /* Largura total do botão */
+}
+
+input[type="submit"]:hover {
+    background-color: #4a6f57; /* Cor ao passar o mouse */
+}
+
+
+
