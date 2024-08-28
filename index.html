@@ -3,73 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+   
     <link rel="stylesheet" href="style.css">
-    <title>Nosso Casamento</title>
+    <title>Casamento M&P</title>
 </head>
+
+
 <body>
+    <div id="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+
+    <div class="menu-lateral">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#contagem-regressiva">Contagem Regressiva</a></li>
+            <li><a href="#confirmacao">Confirmação</a></li>
+            <li><a href="#lista-presentes">Lista de Presentes</a></li>
+            <li><a href="#localizacao">Localização</a></li>
+            <li><a href="#infos-cidade">Hotéis</a></li>
+            <li><a href="#infos-cidade">Salões de Beleza</a></li>
+        </ul>
+    </div>
+
+    <div class="main-container">
     <header>
         <h1> 
             <img src="img/Plano de Fundo iCasei.png" alt="flor" class="flor"> 
-            Pedro Miguel e Maria Clara
+            MARIA CLARA<br>&<br>PEDRO MIGUEL
         </h1>
-        <p>07 de Dezembro de 2024</p>
+        <h6>07 de dezembro de 2024</h6>
     </header>
+    </div>  
     
     <section id="contagem-regressiva">
-        <h2 id="frase1">Faltam</h2>
+        <h3 id="frase1">CONTAGEM REGRESSIVA</h3>
         <div id="contador"></div>
     </section>
 
-  <section>
+  <section id="confirmacao">
     <div class="container">
         <form method="post" action="https://script.google.com/macros/s/AKfycbykCKGUxFLN8e5FWpkkRe6UMV9qOXv6bLHkL2O27CDjSs2Qgpshly8uofkiCICKiyKo/exec" name="contact-form">
-            <h4>Confirmação</h4>
-            <p>Queremos preparar esse dia para comemorar da melhor forma!<br>
-                Por isso, precisamos que você preencha as informações abaixo
+            <h2>CONFIRMAÇÃO</h2>
+            <p>Queremos preparar esse dia para comemorar da melhor forma!<br><br>
+                Por isso, precisamos que você preencha as informações abaixo:
             </p>
             <input type="text" name="Nome" placeholder="Nome">
-            <input type="text" name="Telefone" placeholder="Number">
+            <input type="text" name="Telefone" placeholder="Telefone (Whastapp)">
             <label for="presenca">Você irá comparecer?</label>
-                <select id="presenca" name="Confirmado" required>
+                <select type="select" id="presenca" name="Confirmado" required>
                     <option value="" disabled selected>Selecione uma opção</option>
                     <option value="sim">Sim</option>
                     <option value="nao">Não</option>
                 </select>
-            <input type="submit" value="Submit" id="submit">
+            <input type="submit" value="Enviar" id="submit">
         </form>
     </div>
   </section>
-
-    <section id="lista-presentes">
-        <h2>Lista de Presentes</h2>
-        <p>Se quiser nos presentear, criamos uma lista na Amazon para facilitar e você pode acessar ela pelo seguinte link: 
-            <a href="https://www.amazon.com.br/hz/wishlist/ls/ID_DA_LISTA" target="_blank"> Clique aqui!</a>
-        </p>
-        <p>Agradecemos muito pela sua presença e pelo carinho. Se você não encontrou um presente que te agradou ou  quiser contribuir com um outro valor, fique a vontade para enviar via PIX qualquer valor de seu agrado, basta escanear o QR code ou utilizar o método "Copia e Cola" com o código fornecido abaixo!</p>
-
-        <h3>Contribua via Pix</h3>
-        <p>Chave Pix: SEU_CODIGO_PIX_AQUI</p>
-        <img src="caminho/para/seu/qrcode.png" alt="QR Code Pix" class="qrcode">
+  
+  <section id="lista-presentes">
+    <h3>LISTA DE PRESENTES</h3>
+    <p>Se quiser nos presentear, criamos uma lista na Amazon para facilitar e você pode acessá-la 
+        <a href="https://www.amazon.com.br/hz/wishlist/ls/37CZQD4MFYM2S?ref_=wl_share" target="_blank"> clicando aqui!</a>
+    </p>
+    <p><br>Agradecemos muito pela sua presença e pelo carinho. Se você não encontrou um presente que te agradou ou  quiser contribuir com um outro valor, fique à vontade para enviar via PIX. <br><br> Basta escanear o QR code ou utilizar a chave pix.</p>
+    
+    <div class="pix-container">
+        <div class="pix-qrcode">
+            <img src="img/qrcode.jpg" alt="QR Code Pix" class="qrcode">
+        </div>
+        <div class="pix-info">
+            <h5>Chave Pix: (43) 996486151<br>Pedro Miguel Odebrecht Nassif<br>Instituição: Nubank</h5>
+        </div>
+    </div>
+    <div class="botao-copiar">
+        <button id="copiar-pix">Pix Copia e Cola!</button>
+    </div>
     </section>
 
+
+
     <section id="localizacao">
-        <h2>Localização</h2>
-        <p>Nosso casamento será realizado em duas partes.</p>
+        <h3>LOCALIZAÇÃO</h3>
+        <p>Saiba como chegar até o nosso casamento:</p>
         <div class="mapas-container">
             <div class="mapa-item">
-                <h3>Vamos começar na cerimônia religiosa na Paróquia Coração de Maria</h3>
+                <p>Começaremos com a cerimônia religiosa na Paróquia Coração de Maria</p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3663.8978638060507!2d-51.16836322392917!3d-23.319464252751363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb43596ca1e773%3A0x8f827ff5b48efd17!2sPar%C3%B3quia%20Cora%C3%A7%C3%A3o%20de%20Maria%20-%20Padres%20Claretianos!5e0!3m2!1spt-BR!2sbr!4v1724447051165!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </iframe>
             </div>
 
             <div class="mapa-item">
-                <h3>E depois vamos receber vocês com uma celebração na Chácara Fenix em Cambé</h3>
+                <p>Depois, vamos recebê-los na Chácara Fenix em Cambé</p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14657.38469297629!2d-51.2509872!3d-23.3031956!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb5bce790578af%3A0xdc0ec31ff1bdf5ff!2zQ2jDoWNhcmEgRsOqbml4!5e0!3m2!1spt-BR!2sbr!4v1724447008181!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
         </div>
     </section>
+
+    <section id="infos-cidade">
+        <div class="info-container">
+            <div class="info-box">
+                <h2>Sugestões de Hotel</h2>
+                <ul class="info-lista">
+                    <li class="info-item">
+                        <h5>Comfort Suites Londrina</h5>
+                        <p>Telefone: (43) 3371-8383<br>R. Edwy Taques Araújo, 250</p>
+                        <a href="https://www.instagram.com/comfortsuiteslondrina/" target="_blank">Reservar</a>
+                    </li>
+                    <li class="info-item">
+                        <h5>VILLALBA</h5>
+                        <p>Telefone: (43) 3373-9200<br>R. Edwy Taques Araújo, 300 </p>
+                        <a href="https://www.instagram.com/villalbaldn/" target="_blank">Reservar</a>
+                    </li>
+                    <li class="info-item">
+                        <h5>Hotel Sumatra</h5>
+                        <p>Telefone: (43) 3374-9000<br>R. Sen. Souza Naves, 803 </p>
+                        <a href="https://www.instagram.com/sumatra.hotel/" target="_blank">Reservar</a>
+                    </li>
+                    <li class="info-item">
+                        <h5>Golden Blue Hotel</h5>
+                        <p>Telefone: (43) 3371-8000<br>R. Borba Gato, 1190.</p>
+                        <a href="https://www.instagram.com/goldenbluehotel/" target="_blank">Reservar</a>
+                    </li>
+                    <li class="info-item">
+                        <h5>LONDRISTAR</h5>
+                        <p>Telefone: (43) 3026-3000<br>Rod. Celso Garcia Cid, 3225 - Km 75 </p>
+                        <a href="https://www.instagram.com/hotellondristar/" target="_blank">Reservar</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="info-box">
+                <h2>Sugestões de Salão</h2>
+                <ul class="info-lista">
+
+                    <li class="info-item">
+                        <h5>Blessed Instituto de Beleza</h5>
+                        <p>Telefone: (43) 3028-8505<br>R. La Paz, 447</p>
+                        <a href="https://www.instagram.com/blessedlondrina_salao/" target="_blank">Reservar</a>
+                    </li>
+                    <li class="info-item">
+                        <h5>AURA</h5>
+                        <p>Telefone: (43) 3028-0147<br>R. Prefeito Faria Lima, 920</p>
+                        <a href="https://www.instagram.com/aura_ateliedebeleza/" target="_blank">Reservar</a>
+                    </li>
+                    <li class="info-item">
+                        <h5>MŌR salon</h5>
+                        <p>Telefone: (43) 3027-6017<br>R. Adhemar Pereira de Barros, 625</p>
+                        <a href="https://www.instagram.com/morsalon.londrina/" target="_blank">Reservar</a>
+                    </li>
+                    <li class="info-item">
+                        <h5>Bioma Londrina | Paty Silva</h5>
+                        <p>Telefone: (43) 3301-6560<br>R. Rosa Badim Viêira, 40</p>
+                        <a href="https://www.instagram.com/londrinabioma/" target="_blank">Reservar</a>
+                    </li>
+                    <li class="info-item">
+                        <h5>Edith Cabeleireiros</h5>
+                        <p>Telefone: (43) 3342-5117<br>Rua Bélgica, 1770</p>
+                        <a href="https://www.instagram.com/edithcabeleireiros/" target="_blank">Reservar</a>
+                    </li>                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="noivado">  <img src="img\noivado.jpg" alt="flor" class="noivado"> </section>
+      
+    
+    
+    
+
+    <footer>
+        <p>&copy; Casamento M&P</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
