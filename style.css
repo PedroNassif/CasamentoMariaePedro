@@ -22,7 +22,7 @@ body {
 
 /* Tipografia */
 p, label, h1, h2, h4 {
-    line-height: 1.3; /* Aumenta o espaçamento entre as linhas */
+    line-height: 1.1em; /* Aumenta o espaçamento entre as linhas */
 }
 
 p, label {
@@ -126,11 +126,24 @@ section {
     text-align: center;
 }
 
+#confirmacao{
+    background-color: #ffffff;
+}
+
 #lista-presentes p {
     max-width: 75%; 
     margin: 0 auto; 
     text-align: center;
-    line-height: 1.5;
+    line-height: 1.1em;
+}
+
+.clique{
+    font-size: 1.1em;
+}
+
+.clique:hover{
+    font-size: 1.2em;
+    color: #538466;
 }
 
 
@@ -139,7 +152,6 @@ section {
     background-color: #ffffff;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     max-width: 500px;
     margin: 0 auto;
 }
@@ -293,7 +305,7 @@ a {
 .menu-lateral h2 {
     color: #fff;
     font-size: 1.8em;
-    margin-bottom: 20px;
+    padding: 20px;
 }
 
 .menu-lateral ul {
@@ -318,7 +330,7 @@ a {
 
 #menu-toggle {
     position: fixed;
-    top: 20px;
+    top: 10px;
     left: 20px;
     font-size: 2em;
     color: #ffffff;
@@ -334,31 +346,39 @@ a {
 
 #infos-cidade {
     display: flex;
+    flex-direction: column; /* Alinha todos os elementos em coluna */
     justify-content: center;
     padding: 40px 0;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
 }
+
 .info-container {
     display: flex;
     justify-content: space-between;
     gap: 2%;
     width: 95%;
-    flex-wrap: wrap; /* Adiciona flexibilidade para quebrar em múltiplas linhas */
+    flex-wrap: wrap; /* Mantém a flexibilidade para quebrar em múltiplas linhas */
 }
+
 .info-box {
     flex: 1;
     background-color: #ffffff;
     border-radius: 10px;
     padding: 0.5%;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Adiciona espaçamento abaixo de cada box */
 }
+
 .info-box h2 {
     font-size: 1.8em;
 }
+
 .info-lista {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
+
 .info-item {
     padding: 1%;
     border-bottom: 1.5px solid #ddd;
@@ -367,11 +387,13 @@ a {
     align-items: center;
     flex-wrap: wrap; /* Adiciona flexibilidade para quebrar em múltiplas linhas */
 }
+
 .info-item h5 {
     margin: 0;
     font-size: 18px;
     flex: 1;
 }
+
 .info-item p {
     margin: 0;
     color: #666;
@@ -379,6 +401,7 @@ a {
     font-size: 16px;
     text-align: center;
 }
+
 .info-item a {
     padding: 8px 12px;
     background-color: #2F4533;
@@ -387,8 +410,15 @@ a {
     text-decoration: none;
     text-align: center;
 }
+
 .info-item a:hover {
     background-color: #24392c;
+}
+
+
+.paragrafo-lugar {
+    font-size: 18px; /* Tamanho do texto do parágrafo */
+    margin-bottom: 15px; /* Espaçamento abaixo do parágrafo */
 }
 
 
@@ -407,163 +437,161 @@ a {
 }
 
 /* Estilos para telas menores que 768px (tablets e celulares) */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.2em;
-        margin-top: 40px;
-    }
+@media screen and (max-width: 768px) {
+    /* Seções */
 
-    h2, h3 {
-        font-size: 2em;
-    }
-
-    h4, h5, h6 {
-        font-size: 1.2em;
-    }
-
-    p, label, .info-item p {
-        font-size: 1em;
-    }
-
-    .flor {
-        width: 250px;
-        top: -40px;
-    }
 
     section {
-        margin: 10px 10%;
+        margin: 20px 5%; /* Reduz as margens laterais */
         padding: 15px;
     }
 
-    .main-container {
-        padding: 10px;
+     /* Contagem Regressiva */
+     #contagem-regressiva {
+        border: 3px solid white;
+        margin: 20px 5%; /* Reduz as margens laterais */
+        font-size: 0.6em;
     }
 
-    #contagem-regressiva {
-        width: 90%;
-        margin: 20px auto;
-        border-width: 3px;
-    }
+        /* Menu lateral */
+        .menu-lateral {
+            width: 30%;
+            font-size: small;
+        }
 
-    #contador {
+        #menu-toggle {
+            top: 10px;
+            left: 10px;
+            font-size: 1.2em;
+        }
+
+        /* Tipografia */
+    h1 {
         font-size: 2em;
-        gap: 5px;
     }
 
-    .numero {
-        padding: 8px 12px;
+    h2, h3 {
+        font-size: 1.8em;
+    }
+    
+    p, label {
+        font-size: 1em;
     }
 
-    .mapas-container {
-        flex-direction: column;
-        gap: 20px;
-    }
+    /* Imagens e Iframes */
 
-    .mapa-item {
-        max-width: 100%;
-        margin-bottom: 20px;
-        height: 350px; /* Ajuste a altura para se adequar à tela menor */
-    }
-
-    iframe {
-        height: 100%; /* Faz o iframe ocupar a altura total da .mapa-item */
-    }
-
-    .flor{
+    .pix-qrcode{
         display: none;
     }
 
-    .pix-info {
-        text-align: center;
-        margin-right: 0;
-        margin-bottom: 20px;
+    .mapa-item iframe {
+        height: 42vh; /* Reduz a altura dos mapas */
     }
 
-    .qrcode {
-        width: 130px;
-        margin: 0 auto;
+    .noivado {
+        border-radius: 10px;
     }
 
-    .info-container {
-        flex-direction: column; /* Torna os containers verticais */
-        gap: 20px; /* Aumenta o espaço entre os containers */
-        width: 100%; /* Ajusta a largura para preencher a tela */
-    }
-    .info-box {
-        width: 100%; /* Ocupa toda a largura disponível */
-    }
-    .info-item {
-        flex-direction: column; /* Coloca os elementos em uma única coluna */
-        align-items: flex-start; /* Alinha os itens à esquerda */
-    }
-    .info-item h5, .info-item p {
-        flex: none; /* Desabilita o flex para elementos se ajustarem ao conteúdo */
-        text-align: left; /* Alinha o texto à esquerda */
-        margin-bottom: 10px; /* Adiciona espaço entre os elementos */
-    }
-    .info-item p {
-        text-align: left; /* Alinha o texto à esquerda */
-    }
-    .info-item a {
-        align-self: flex-end; /* Move o botão para a direita */
+    .paragrafo-lugar{
+        display: none;
     }
 
-    input[type="text"], 
-    select, 
-    input[type="submit"] {
+
+    .paragrafo-loc {
+        text-indent: -9999px; /* Esconde o texto original */
+    }
+    
+    .paragrafo-loc::after {
+        content: "Nosso casamento começará às 15:45 com uma cerimônia religiosa na Paróquia Coração de Maria, em seguida, receberemos vocês na Chácara Fenix para uma comemoração!"; 
+        text-indent: 0; /* Garante que o novo texto esteja visível */
+        line-height: 1.1em; /* Restaura o espaçamento padrão */
+        display: block; /* Garante que o novo conteúdo seja exibido */
+    }
+
+    /* Formulário */
+    input[type="text"], select {
+        width: 90%; /* Aumenta a largura dos inputs */
+    }
+
+    .container, .pix-container {
         width: 90%;
     }
-
-    #menu-toggle {
-        font-size: 1em;
-        top: 10px;
-        left: 10px;
+     /* Listas */
+     .info-container {
+        flex-direction: column; /* Muda para coluna no mobile */
+        gap: 10px;
     }
+
+    #infos-cidade{
+        background-color: #2F4533;
+    }
+
+    .info-box {
+        width: 100%; /* Ocupa toda a largura da tela */
+        background-color: transparent;
+        box-shadow: none;
+        color: #ffffff;
+    }
+
+    .info-item p {
+        display: none;
+    }
+
+    #sugest{
+        border-bottom: 2px solid #ffffff; /* Cor do sublinhado */
+    }
+
+    .info-item a {
+        padding: 5px 8px;
+        background-color: #2F4533;
+        color: #ffffff;
+        border-radius: 5px;
+        text-decoration: none;
+        text-align: center;
+        font-size: 0.9em;
+    }
+
+    .info-lista a{
+        background-color: #5C8063;
+    }
+
+    #noivado{
+        width: 70%;
+    }
+
+    .mapa-sugestoes iframe{
+        width: 300px;
+    }
+
+    .flor{
+        width: 60%;
+    }
+
+
 }
 
-/* Estilos para telas menores que 480px (celulares pequenos) */
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
     h1 {
         font-size: 1.8em;
     }
 
-    h2, h3 {
+    h2 {
+        font-size: 1.6em;
+    }
+
+    h3 {
         font-size: 1.5em;
     }
 
-    h4, h5, h6 {
-        font-size: 1em;
+    p, label {
+        font-size: 0.9em;
     }
 
-    .flor {
-        width: 200px;
-        top: -20px;
+    .pix-container {
+        padding: 15px;
     }
 
-    .mapa-item {
-        height: 250px;
-    }
-
-    #contador {
-        font-size: 1.5em;
-        gap: 3px;
-    }
-
-    .numero {
-        padding: 6px 10px;
-    }
-
-    input[type="text"], 
-    select, 
-    input[type="submit"] {
-        width: 85%;
-    }
-
-    .pix-info {
-        text-align: center;
-    }
-
-    .qrcode {
-        width: 100px;
+    .mapa-item iframe {
+        height: 25vh; /* Ainda mais compacto para telas bem pequenas */
     }
 }
