@@ -221,6 +221,7 @@ input[type="submit"]:hover {
     text-align: left; /* Alinha o texto à esquerda */
     flex: 1; /* Permite que a parte da chave Pix ocupe o espaço disponível */
     margin-right: 20px; /* Espaço entre a chave Pix e o QR Code */
+    cursor: pointer;
 }
 
 /* QR Code */
@@ -421,6 +422,19 @@ a {
     margin-bottom: 15px; /* Espaçamento abaixo do parágrafo */
 }
 
+.mapa-sugestoes {
+    width: 100%;
+    max-width: 800px; /* Ajuste a largura máxima conforme necessário */
+    margin: 20px auto; /* Centraliza o mapa na página */
+}
+
+.mapa-sugestoes iframe {
+    width: 100%; /* Faz com que o iframe preencha a largura do contêiner */
+    height: 480px; /* Mantém a altura do mapa */
+    border: 0; /* Remove a borda padrão */
+    border-radius: 10px; /* Borda arredondada */
+}
+
 
 #noivado {
     justify-content: center;
@@ -523,7 +537,8 @@ a {
     }
 
     #infos-cidade{
-        background-color: #2F4533;
+        /* background-color: #2F4533; */
+        background-color: transparent;
     }
 
     .info-box {
@@ -551,12 +566,8 @@ a {
         font-size: 0.9em;
     }
 
-    .info-lista a{
-        background-color: #5C8063;
-    }
-
     #noivado{
-        width: 70%;
+        width: 60%;
     }
 
     .mapa-sugestoes iframe{
@@ -566,8 +577,6 @@ a {
     .flor{
         width: 60%;
     }
-
-
 }
 
 @media screen and (max-width: 480px) {

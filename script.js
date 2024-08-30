@@ -35,7 +35,7 @@ form.addEventListener('submit', e => {
 document.getElementById("copiar-pix").addEventListener("click", function() {
     const codigoPix = "00020126360014BR.GOV.BCB.PIX0114+55439964861515204000053039865802BR5925Pedro Miguel Odebrecht Na6009SAO PAULO62140510UFpE2HYtqB6304C0F4"; // Código Pix
     navigator.clipboard.writeText(codigoPix).then(() => {
-        alert("Código Pix copiado para a área de transferência!");
+        alert("Código Pix copiado!");
     });
 });
 
@@ -46,3 +46,15 @@ function toggleMenu() {
     menu.classList.toggle('active');
     toggle.classList.toggle('active');
 }
+
+document.getElementById('pix-info').addEventListener('click', function() {
+    const number = '(43) 996486151';
+    navigator.clipboard.writeText(number).then(() => {
+        // Estilo de feedback visual
+        this.style.cursor = 'pointer';
+        this.style.backgroundColor = '#e0ffe0'; // Muda a cor de fundo ao clicar
+        alert('Chave Pix Copiada: ' + number);
+    }).catch(err => {
+        console.error('Erro ao copiar: ', err);
+    });
+});
