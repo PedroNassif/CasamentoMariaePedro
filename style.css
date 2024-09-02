@@ -1,7 +1,7 @@
 /* Configurações globais */
 body {
     font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
+    font-weight: 400;
     font-style: normal;
     text-align: center;
     font-size: larger;
@@ -159,7 +159,7 @@ section {
 
 
 input[type="text"],
-select {
+select, #mensagem {
     width: 80%;
     padding: 10px;
     margin: 10px auto;
@@ -174,7 +174,7 @@ select {
 }
 
 input[type="text"]:focus, 
-select:focus {
+select:focus, #mensagem:focus {
     border-color: #2F4533;
     outline: none;
 }
@@ -279,11 +279,10 @@ input[type="submit"]:hover {
     height: 50vh; /* Altura fixa */
 }
 
-
-
-/* Links */
-a {
-    color: #2F4533; /* Cor do link */
+#gift {
+    width: 12%;
+    display: block; /* Coloca o elemento em uma nova linha */
+    margin: 10px auto; /* Centraliza o elemento horizontalmente */
 }
 
 .menu-lateral {
