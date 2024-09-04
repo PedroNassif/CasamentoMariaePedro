@@ -126,9 +126,6 @@ section {
     text-align: center;
 }
 
-#confirmacao{
-    background-color: #ffffff;
-}
 
 #lista-presentes p {
     max-width: 75%; 
@@ -152,8 +149,9 @@ section {
     background-color: #ffffff;
     border-radius: 10px;
     padding: 20px;
-    max-width: 500px;
+    max-width: 800px;
     margin: 0 auto;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -425,6 +423,7 @@ input[type="submit"]:hover {
     width: 100%;
     max-width: 800px; /* Ajuste a largura máxima conforme necessário */
     margin: 20px auto; /* Centraliza o mapa na página */
+    
 }
 
 .mapa-sugestoes iframe {
@@ -432,6 +431,7 @@ input[type="submit"]:hover {
     height: 480px; /* Mantém a altura do mapa */
     border: 0; /* Remove a borda padrão */
     border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
 }
 
 
