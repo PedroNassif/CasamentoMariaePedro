@@ -522,7 +522,7 @@ input[type="submit"]:hover {
     }
 
     /* Formulário */
-    input[type="text"], select {
+    input[type="text"], select, #mensagem {
         width: 90%; /* Aumenta a largura dos inputs */
     }
 
