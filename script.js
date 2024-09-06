@@ -1,4 +1,4 @@
-var dataCasamento = new Date("December 7, 2024 16:00:00").getTime();
+var dataCasamento = new Date("December 7, 2024 15:00:00").getTime();
 var x = setInterval(function() {
     var agora = new Date().getTime();
     var distancia = dataCasamento - agora;

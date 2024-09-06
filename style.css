@@ -515,7 +515,7 @@ input[type="submit"]:hover {
     }
     
     .paragrafo-loc::after {
-        content: "Nosso casamento começará às 15:45 com uma cerimônia religiosa na Paróquia Coração de Maria, em seguida, receberemos vocês na Chácara Fenix para uma comemoração!"; 
+        content: "Nosso casamento começará às 15:30 com uma cerimônia religiosa na Paróquia Coração de Maria, em seguida, receberemos vocês na Chácara Fenix para uma comemoração!"; 
         text-indent: 0; /* Garante que o novo texto esteja visível */
         line-height: 1.1em; /* Restaura o espaçamento padrão */
         display: block; /* Garante que o novo conteúdo seja exibido */
