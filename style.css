@@ -529,6 +529,10 @@ input[type="submit"]:hover {
     .container, .pix-container {
         width: 90%;
     }
+
+    #pix-info h5{
+        font-size: 19px;
+    }
      /* Listas */
      .info-container {
         flex-direction: column; /* Muda para coluna no mobile */
@@ -576,6 +580,11 @@ input[type="submit"]:hover {
     .flor{
         width: 60%;
     }
+
+    #gift {
+        width: 25%;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
